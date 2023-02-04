@@ -57,15 +57,15 @@ plant = EXAMPLES[name_selected].copy()
 st.session_state.Description = plant["Description"]
 
 # Page title
-st.markdown("# Plant Gallery")
+st.markdown("# _Plant Gallery_")
 
 # filter form
 col1, col2, col3 = st.columns([2, 1, 2])
 with col1:
     st.caption("Preference")
     purpose = st.selectbox("Select your purpose",
-                           ('Edible',
-                            'Decoration',
+                           ('Decoration',
+                            'Edible',
                             'Both'),
                            label_visibility='collapsed')
     search = st.button("Submit")
@@ -73,9 +73,9 @@ with col1:
 with col2:
     st.caption("Allergy")
     allergy = st.selectbox("Select",
-                           ('1',
-                            '2',
-                            '3'),
+                           ('Pollen',
+                            'Wheat',
+                            'Chili'),
                            label_visibility='collapsed')
 
 with col3:
@@ -110,7 +110,7 @@ index_selected = image_select(
 )
 
 # update the index in the session_state
-if index_selected != st.session_state["previous_example_index"]:
+if index_selected != st.session_state["previous_example_index"] or search:
     st.session_state.plant_name = st.session_state.plant_name
     st.session_state.plant_fp = st.session_state.plant_fp
 

@@ -7,7 +7,29 @@ st.set_page_config(
     layout="centered"
 )
 
-greetings = st.title('_Flora / Edible Selected: Roses_')
+m = st.markdown("""
+    <style>
+    body{
+        background-color: #5b7357
+    }
+    div.stButton > button {
+        background-color: #e3e8c5;
+        color:#2b3115;
+        border: none;
+        padding: 15px 32px;
+    }
+    div.stButton > button:hover {
+        background-color: #5b7357;
+        color:#fdfdfd;
+        border: none;
+    }
+    t1 {
+        font-size: 20px;
+        color:#2b3115;
+    }
+    </style>""", unsafe_allow_html=True)
+
+greetings = st.title('_Flora Selected: Roses_')
 col1, col2, col3 = st.columns([1, 1, 1])
 with col1:
     before = col1.header("_Before_")    
@@ -25,12 +47,14 @@ st.markdown("""<style> .css-po3vlj exg6vvm15 {
     }
     """, unsafe_allow_html=True)
 
-st.header("_See it Before You Sow It_") 
+st.header("_See it before you Sow it_")
 st.write("Use our virtual try-on feature to get a glimpse of what your garden could look like with our AI-powered visualization tool"
 )
 
 st.file_uploader("_Upload your garden here_")
 st.write("_Privacy Notice: By using our app, you understand and agree that any images provided will only be used for the purpose of generating a virtual representation of your garden using our AI model. We will not save any images or use them for any other purpose. Your privacy and security are of utmost importance to us_")
+
+st.write(" ")
 
 col4, col5 = st.columns(2)
 
