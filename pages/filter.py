@@ -7,11 +7,21 @@ st.set_page_config(
     page_title="plant gallery", page_icon="🍃",
     initial_sidebar_state="collapsed")
 st.markdown("# Plant Gallery")
+with open("./data/plant_info/example.json", "r") as f:
+    EXAMPLES = json.load(f)
+
+example_image_pattern = "data/plant_pics/{}.png"
+example_image_fp = [
+    example_image_pattern.format(name.lower()) for name in list(EXAMPLES.keys())[:4]
+]
+name_selected = list(EXAMPLES.keys())[0]
+
 
 # Store the initial value in session state
 st.session_state.placeholder = "Boston"
 st.session_state.disabled = False
 st.session_state["previous_example_index"] = 0
+st.session_state.update(EXAMPLES[name_selected].copy())
 
 # form
 col1, col2, col3 = st.columns([2, 1, 2])
@@ -46,13 +56,7 @@ with col3:
         placeholder=st.session_state.placeholder,
         value=st.session_state.placeholder
     )
-with open("./data/plant_info/example.json", "r") as f:
-    EXAMPLES = json.load(f)
 
-example_image_pattern = "data/plant_pics/{}.png"
-example_image_fp = [
-    example_image_pattern.format(name.lower()) for name in list(EXAMPLES.keys())[:4]
-]
 index_selected = image_select(
     "",
     images=example_image_fp,
@@ -61,9 +65,15 @@ index_selected = image_select(
     return_value="index",
 )
 
+object_selected = ""
+
 # update the index in the session_state
 if index_selected != st.session_state["previous_example_index"]:
     name_selected = list(EXAMPLES.keys())[index_selected]
     st.session_state.update(EXAMPLES[name_selected].copy())
     st.session_state["previous_example_index"] = index_selected
+
+st.write(st.session_state["Description"])
+
+
 

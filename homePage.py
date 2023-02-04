@@ -4,6 +4,11 @@ import pandas as pd
 from streamlit_extras.switch_page_button import switch_page
 
 
+st.set_page_config(
+    page_title="home", page_icon="🍃",
+    initial_sidebar_state="collapsed")
+
+
 def Title():
     st.markdown("", unsafe_allow_html=True)
     col1, col2, col3 = st.columns([3, 100, 3])

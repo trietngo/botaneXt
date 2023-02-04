@@ -1,5 +1,5 @@
 {
-    "Strawberry": {
+    "strawberry": {
         "Purpose": "Edible",
         "Location ": "SF",
         "Description": "Strawberries are a hybrid species of the genus Fragaria that produce sweet, bright red fruits."
@@ -8,11 +8,6 @@
         "Purpose": "Edible",
         "Location ": "SF",
         "Description": "The carrot is a root vegetable. It is usually orange in color, but some cultivars are purple, black, red, white, and yellow."
-    },
-    "Lettuce ": {
-        "Purpose": "Edible",
-        "Location ": "Seattle ",
-        "Description": "Lettuce is an annual plant most often grown as a leaf vegetable, but sometimes for its stem and seeds.\u00a0"
     },
     "Tomato": {
         "Purpose": "Edible",
@@ -28,6 +23,11 @@
         "Purpose": "Decoration",
         "Location ": "Miami",
         "Description": "Tulips are usually large, showy and brightly coloured, generally red, pink, yellow, or white.\u00a0"
+    },
+    "Lettuce ": {
+        "Purpose": "Edible",
+        "Location ": "Seattle ",
+        "Description": "Lettuce is an annual plant most often grown as a leaf vegetable, but sometimes for its stem and seeds.\u00a0"
     },
     "Marigold": {
         "Purpose": "Decoration",
