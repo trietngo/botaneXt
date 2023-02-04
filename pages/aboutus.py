@@ -60,8 +60,8 @@ def goButton():
         background-color: rgb(0, 0, 0);
         opacity: 0;
         margin-left: 50px;
-        width: 10vw;
-        height: 10vh;
+        width: 60vw;
+        height: 60vh;
         }
         </style>""", unsafe_allow_html=True)
     columns = st.columns((3, 3, 3))
@@ -76,7 +76,6 @@ def goButton():
         background-color: rgba(0, 0, 0, 0);
         opacity: 0;}
         </style>""", unsafe_allow_html=True)
-    columns[1].header("-")
     columns[1].header("-")
     columns[1].header("-")
     columns[1].header("-")

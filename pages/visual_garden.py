@@ -33,12 +33,12 @@ greetings = st.title('_Flora Selected: Roses_')
 col1, col2, col3 = st.columns([1, 1, 1])
 with col1:
     before = col1.header("_Before_")    
-    beforeImage = col1.image("https://st2.depositphotos.com/1010683/9547/i/950/depositphotos_95478192-stock-photo-beautiful-empty-garden.jpg", width= 300)
+    beforeImage = col1.image("./data/static_resource/before.jpeg", width= 300)
 
 
 with col3:
     after = col3.header("_After_")
-    afterImage = col3.image("https://www.youredm.com/wp-content/uploads/2021/05/nurture-flipped.jpg", width= 300)
+    afterImage = col3.image("./data/static_resource/after.png", width= 300)
 
 
 st.markdown("""<style> .css-po3vlj exg6vvm15 {
