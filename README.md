@@ -10,4 +10,4 @@ Our product is a sustainable gardening solution that helps individuals reduce th
 ![](data/static_resource/finalHP.png)
 
 # Presentation link 
-https://www.canva.com/design/DAFZjDkxZpk/BHLKvkfA5XsxwpFs4sndug/editutm_content=DAFZjDkxZpk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+https://www.canva.com/design/DAFZjDkxZpk/BHLKvkfA5XsxwpFs4sndug/edit?utm_content=DAFZjDkxZpk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
