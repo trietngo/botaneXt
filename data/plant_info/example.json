@@ -1,47 +1,47 @@
 {
-    "strawberry": {
+    "Strawberry": {
         "Purpose": "Edible",
-        "Location ": "SF",
+        "Location": "San Francisco",
         "Description": "Strawberries are a hybrid species of the genus Fragaria that produce sweet, bright red fruits."
     },
     "Carrot": {
         "Purpose": "Edible",
-        "Location ": "SF",
+        "Location": "San Francisco",
         "Description": "The carrot is a root vegetable. It is usually orange in color, but some cultivars are purple, black, red, white, and yellow."
     },
     "Tomato": {
         "Purpose": "Edible",
-        "Location ": "Miami",
+        "Location": "Miami",
         "Description": "The tomato is the fruit of the tomato plant, a member of the Nightshade family\u00a0"
     },
     "Rose": {
         "Purpose": "Decoration",
-        "Location ": "Seattle ",
+        "Location": "Seattle",
         "Description": "Roses are beautiful blooms that grow in a variety of shades ranging anywhere from white to deep red "
     },
     "Tulip": {
         "Purpose": "Decoration",
-        "Location ": "Miami",
+        "Location": "Miami",
         "Description": "Tulips are usually large, showy and brightly coloured, generally red, pink, yellow, or white.\u00a0"
     },
     "Lettuce ": {
         "Purpose": "Edible",
-        "Location ": "Seattle ",
+        "Location": "Seattle",
         "Description": "Lettuce is an annual plant most often grown as a leaf vegetable, but sometimes for its stem and seeds.\u00a0"
     },
     "Marigold": {
         "Purpose": "Decoration",
-        "Location ": "Boston",
+        "Location": "Boston",
         "Description": "Marigolds are bright orange blooms that grow in groups"
     },
     "Freesia": {
         "Purpose": "Decoration",
-        "Location ": "Boston",
+        "Location": "Boston",
         "Description": "Freesia is typically yellow and form\u00a0beautiful trumpet-like blooms\u00a0"
     },
     "Blueberry": {
         "Purpose": "Edible",
-        "Location ": "Seattle ",
+        "Location": "Seattle",
         "Description": "Perennial flowering plants with sweet, indigo-colored berries"
     }
 }

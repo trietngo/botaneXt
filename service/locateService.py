@@ -10,7 +10,7 @@ def get_ip():
 def get_location(input_ip):
     response = requests.get(f"http://ipinfo.io/{input_ip}/json")
     data = response.json()
-    return data["city"], data["region"], data["country"]
+    return data["city"]
 
 
 ip = get_ip() # get_ip() should be the function from the previous answer

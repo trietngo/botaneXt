@@ -1,13 +1,16 @@
 # imported libraries 
-import streamlit as st
+from utils.st import *
 import pandas as pd
 from streamlit_extras.switch_page_button import switch_page
 
 
 st.set_page_config(
     page_title="home", page_icon="🍃",
-    initial_sidebar_state="collapsed")
+    initial_sidebar_state="collapsed",
+)
 
+remote_css("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@600&display=swap")
+local_css("utils/style.css")
 
 def Title():
     st.markdown("", unsafe_allow_html=True)
