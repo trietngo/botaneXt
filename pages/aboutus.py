@@ -56,15 +56,20 @@ def userPropaganda():
 
 def goButton():
     st.markdown("""
-        <style> .css-5uatcg {
+        <style> button {
         background-color: rgb(0, 0, 0);
         opacity: 0;
-        margin: 160px 0 0 30px;
+        margin-left: 50px;
         width: 10vw;
         height: 10vh;
         }
         </style>""", unsafe_allow_html=True)
     columns = st.columns((3, 3, 3))
+
+    columns = st.columns((3, 3, 3))
+    columns[1].title("")
+    columns[1].title("")
+    columns[1].write("\n")
 
     st.markdown("""
         <style> h2 {
@@ -78,6 +83,7 @@ def goButton():
     columns[1].header("-")
     columns[1].header("-")
     columns[1].header("-")
+
 
     button_pressed = columns[1].button('Let\'s get started!')
     st.markdown("", unsafe_allow_html=True)

@@ -58,7 +58,8 @@ def goButton():
     st.markdown("""
         <style> div.stButton {
         background-color: rgba(0, 0, 0, 0);
-        opacity: 100;}
+        opacity: 0;
+        margin: 2rem;}
         </style>""", unsafe_allow_html=True)
     columns = st.columns((3, 3, 3))
     columns[1].title("")
@@ -68,6 +69,7 @@ def goButton():
         background-color: rgba(0, 0, 0, 0);
         opacity: 0;}
         </style>""", unsafe_allow_html=True)
+    columns[1].header("-")
     columns[1].header("-")
     columns[1].header("-")
     columns[1].header("-")
@@ -98,7 +100,7 @@ def main():
     #Title()
     # calls the function to fetch the background
     add_bg_fromm_url(
-        "https://cdn.discordapp.com/attachments/1067577269389885460/1071505083734437928/hp4.png")
+        "https://cdn.discordapp.com/attachments/1067577269389885460/1071550609863487569/homepagefinal.jpeg.png")
     #howItWorks()
     #userPropaganda()
     goButton()
