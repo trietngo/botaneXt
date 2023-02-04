@@ -1,0 +1,22 @@
+{
+  "tomato":{
+    "name": "plant_info",
+    "version": "1.0.0",
+    "dependencies": ""
+    },
+  "potato": {
+    "name": "plant_info",
+    "version": "1.0.0",
+    "dependencies": ""
+  },
+  "onion": {
+    "name": "plant_info",
+    "version": "1.0.0",
+    "dependencies": ""
+  },
+  "strawberry": {
+    "name": "plant_info",
+    "version": "1.0.0",
+    "dependencies": ""
+  }
+}
