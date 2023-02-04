@@ -10,6 +10,12 @@ def get_ip():
 def get_location(input_ip):
     response = requests.get(f"http://ipinfo.io/{input_ip}/json")
     data = response.json()
+
+    # both South and North San Francisco are treated as 'San Francisco'
+    # temporary solution, need to improve the database in the future
+    if data["city"] == "South San Francisco":
+        data["city"] = "San Francisco"
+
     return data["city"]
 
 

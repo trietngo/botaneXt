@@ -1,3 +1,5 @@
+import streamlit
+
 from service.locateService import *
 from streamlit_image_select import image_select
 from utils.st import *
@@ -21,16 +23,16 @@ st.session_state.disabled = False
 with open("./data/plant_info/example.json", "r") as f:
     EXAMPLES = json.load(f)
 file_pattern = "data/plant_pics/{}.png"
-if "plane_name" not in st.session_state.keys():
-    plant_name = list(EXAMPLES.keys())[:4]
-    plant_fp = [file_pattern.format(name.lower()) for name in plant_name]
-    name_selected = plant_name[0]
-    st.session_state["previous_example_index"] = 0
-    st.session_state.update(EXAMPLES[name_selected].copy())
+
+if "plant_name" not in st.session_state.keys():
     st.session_state.plant_name = list(EXAMPLES.keys())[:4]
-else:
-    plant_name = st.session_state.plant_name
-    plant_fp = get_image_path(plant_name)
+    st.session_state.plant_fp = \
+        [file_pattern.format(name.lower())
+         for name in st.session_state.plant_name]
+name_selected = st.session_state.plant_name[0]
+st.session_state["previous_example_index"] = 0
+plant = EXAMPLES[name_selected].copy()
+st.session_state.Description = plant["Description"]
 
 # Page title
 st.markdown("# Plant Gallery")
@@ -71,23 +73,28 @@ with col3:
 
 # actions after user clicks the search button
 if search:
-    plant_name = search_plant(EXAMPLES, location, purpose)
+    plant_name = search_plant(EXAMPLES, address, purpose)
     plant_fp = get_image_path(plant_name)
     st.session_state.plant_name = plant_name
+    st.session_state.plant_fp = plant_fp
 
 # actions after user selected any image
 index_selected = image_select(
     "",
-    images=plant_fp,
-    captions=plant_name,
+    images=st.session_state.plant_fp,
+    captions=st.session_state.plant_name,
     index=0,
     return_value="index",
 )
 
 # update the index in the session_state
 if index_selected != st.session_state["previous_example_index"]:
-    name_selected = plant_name[index_selected]
-    st.session_state.update(EXAMPLES[name_selected].copy())
+    st.session_state.plant_name = st.session_state.plant_name
+    st.session_state.plant_fp = st.session_state.plant_fp
+
+    name_selected = st.session_state.plant_name[index_selected]
+    plant = EXAMPLES[name_selected].copy()
+    st.session_state.Description = plant["Description"]
     st.session_state["previous_example_index"] = index_selected
 
 with st.expander("See details", expanded=True):

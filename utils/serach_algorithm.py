@@ -6,7 +6,6 @@ def search_plant(data, location: str, purpose: str):
         search plants by location, allergy & purpose
     :param data: plant information in Json format
     :param location: str
-    :param allergy: str
     :param purpose: str
     :return: a list of plant name
     """
@@ -22,15 +21,16 @@ def search_plant(data, location: str, purpose: str):
 
 
 def get_image_path(plant_names):
-    path_pattern = "data/plant_pics/{}.png"
+    path_pattern = "./data/plant_pics/{}.png"
     example_image_fp = [
         path_pattern.format(name.lower()) for name in plant_names
     ]
     return example_image_fp
 
 
-# if __name__ == '__main__':
-#     with open("../data/plant_info/example.json", "r") as f:
-#         data = json.load(f)
-#     select_plant = search_plant(data, "Miami", "Edible")
-#     print(select_plant)
+if __name__ == '__main__':
+    with open("../data/plant_info/example.json", "r") as f:
+        data = json.load(f)
+    select_plant = search_plant(data, "San Francisco", "Edible")
+    select_path = get_image_path(select_plant)
+    print(select_path)
