@@ -1,10 +1,9 @@
-import streamlit
 from streamlit_extras.switch_page_button import switch_page
 
 from service.locateService import *
 from streamlit_image_select import image_select
 from utils.st import *
-from utils.serach_algorithm import *
+from service.serach_algorithm import *
 
 # set up page configuration
 st.set_page_config(
