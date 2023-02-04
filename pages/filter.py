@@ -1,4 +1,5 @@
 import streamlit
+from streamlit_extras.switch_page_button import switch_page
 
 from service.locateService import *
 from streamlit_image_select import image_select
@@ -99,3 +100,13 @@ if index_selected != st.session_state["previous_example_index"]:
 
 with st.expander("See details", expanded=True):
     st.markdown(st.session_state["Description"], unsafe_allow_html=True)
+
+col4, col5 = st.columns(2)
+
+with col4:
+    if st.button("Visualize Me 🌷"):
+        switch_page("visualize_garden")
+
+with col5:
+    if st.button("Soil Test 🔬"):
+        switch_page("userForm")
