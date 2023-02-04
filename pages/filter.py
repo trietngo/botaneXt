@@ -15,6 +15,27 @@ st.set_page_config(
 remote_css(
     "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family"
     "=Poppins:wght@600&display=swap")
+m = st.markdown("""
+    <style>
+    body{
+        background-color: #5b7357
+    }
+    div.stButton > button {
+        background-color: #e3e8c5;
+        color:#2b3115;
+        border: none;
+        padding: 15px 32px;
+    }
+    div.stButton > button:hover {
+        background-color: #5b7357;
+        color:#fdfdfd;
+        border: none;
+    }
+    t1 {
+        font-size: 20px;
+        color:#2b3115;
+    }
+    </style>""", unsafe_allow_html=True)
 
 # Store the initial value in session state
 st.session_state.placeholder = "Boston"
@@ -98,8 +119,7 @@ if index_selected != st.session_state["previous_example_index"]:
     st.session_state.Description = plant["Description"]
     st.session_state["previous_example_index"] = index_selected
 
-with st.expander("See details", expanded=True):
-    st.markdown(st.session_state["Description"], unsafe_allow_html=True)
+st.markdown("<t1>"+st.session_state["Description"]+"</t1>", unsafe_allow_html=True)
 
 col4, col5 = st.columns(2)
 
