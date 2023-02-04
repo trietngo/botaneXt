@@ -6,20 +6,22 @@ st.set_page_config (
 )
 
 def submission_form():
-    st.title("_Order A Soil Sample_")
-    st.text_input("Name")
-    st.text_input("Address")
-    st.text_input("Email")
-
     columns = st.columns((1, 1, 1))
+    with columns[1]:
+        st.title("_Order A Soil Sample_")
+        st.text_input("Name")
+        st.text_input("Address")
+        st.text_input("Email")
+
+
 
     
     pressed = columns[1].button("Submit")
 
-    cancel = columns[2].button("Cancel")
+    cancel = columns[1].button("Cancel")
 
     if pressed:
-        switch_page("empty")
+        switch_page("thank_you")
 
     if cancel:
         switch_page("homePage")

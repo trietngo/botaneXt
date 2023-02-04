@@ -43,5 +43,26 @@
         "Purpose": "Edible",
         "Location": "Seattle",
         "Description": "Perennial flowering plants with sweet, indigo-colored berries"
-    }
+    },
+    "Cabbage": {
+        "Purpose": "Edible",
+        "Location": "Boston",
+        "Description": "A leafy green vegetable that is very popular in cold and d"
+    },
+    "AloeVera": {
+        "Purpose": "Decoration",
+        "Location": "San Francisco",
+        "Description": "Aloe vera is a succulent plant that is widely used for its medicinal properties. With thick, fleshy leaves that store water, aloe vera is a low-maintenance plant that is well-suited for indoor cultivation. The gel from the aloe vera plant is commonly used in skincare products for its moisturizing and healing properties. In addition to its practical uses, aloe vera is also an attractive plant with a unique and distinctive appearance that adds interest to any indoor space."
+
+    },
+    "Lavender": {
+        "Purpose": "Decoration",
+        "Location": "Boston",
+        "Description": "Lavender is a fragrant and attractive flowering plant that is well-known for its soothing aroma. With its delicate purple blooms and attractive foliage, lavender is a popular addition to gardens, window boxes, and indoor spaces. In addition to its beauty, lavender is also a versatile plant that has a variety of practical uses, including use in aromatherapy, skincare products, and cooking. When grown in the right conditions, lavender is a low-maintenance plant that is easy to care for."
+    },
+    "Basil": {
+        "Purpose": "Edible",
+        "Location": "Miami",
+        "Description": "Basil is a popular herb that is widely used in cooking. With its fragrant leaves and sweet, pungent flavor, basil is a staple ingredient in many dishes, particularly in Mediterranean and Asian cuisine. Basil is typically grown outdoors in a sunny location and can be easily cared for with regular watering and pruning."
+  }
 }
