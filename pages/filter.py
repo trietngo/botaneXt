@@ -125,7 +125,7 @@ col4, col5 = st.columns(2)
 
 with col4:
     if st.button("Visualize Me 🌷"):
-        switch_page("visualize_garden")
+        switch_page("visual_garden")
 
 with col5:
     if st.button("Soil Test 🔬"):
