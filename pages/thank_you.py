@@ -39,7 +39,7 @@ def acknowledgements():
         max-width: 90vw;
         color: #5c7457;
         text-align: center;
-        font-size: 2rem;
+        font-size: 4rem;
         font-weight: bold;
         }
     </style>
@@ -54,7 +54,7 @@ def acknowledgements():
             max-width: 90vw;
             color: #5c7457;
             text-align: center;
-            font-size: 1rem;
+            font-size: 1.5rem;
             font-weight: normal;
             }
         </style>
@@ -66,7 +66,19 @@ def acknowledgements():
     </style>
     """, unsafe_allow_html=True)
 
+    st.image("https://media.discordapp.net/attachments/1067577269389885460/1071537269971882075/icons8-plant-100.png")
 
+    st.markdown("""<style> .css-1kyxreq {
+            justify-content: center;
+        </style>
+        """, unsafe_allow_html=True)
+
+    st.markdown("""<style> img {
+                margin-top: 30px;
+            </style>
+            """, unsafe_allow_html=True)
+
+    st.write("Created by: **__Hua Wang, Senay Tilahun, Zadie Moon, Yan To, Huiqin Hu, and Triet Ngo__** ")
 
 def main():
     acknowledgements()
